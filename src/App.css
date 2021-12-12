@@ -1,0 +1,26 @@
+.container-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.set-with-navbar{
+    width:6.5%;
+    transition: all 0.75s ease;
+}
+.set-with-navbar.open{
+    width: 20.7%;
+}
+.set-with-router{
+    width:93.5%;
+    transition: all 0.75s ease;
+}
+.set-with-router-open{
+    width:79.3%;
+}
+@media only screen and (max-width: 768px){
+    .left, .right{
+        float: none;
+        width: 100%;
+    }
+}
