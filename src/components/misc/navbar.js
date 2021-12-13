@@ -34,7 +34,7 @@ function Navbar({openNavbar, setOpenNavbar}) {
             <li>
                 <a href = "/">
                 <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHome} /></i>
-                <span className="links_name">Trang Chủ </span>
+                <span className="links_name">Trang Chủ</span>
                 </a>
                 <span className="tooltip">Trang Chủ</span>
             </li>

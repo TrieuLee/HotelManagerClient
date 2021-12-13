@@ -6,7 +6,7 @@ function Router() {
    return (
     <BrowserRouter>
     <Switch>
-        <Route exact path="/"><div>Trang chủ</div></Route>
+        <Route exact path="/">Trang Chủ</Route>
         <Route path="/types"><div>Thể Loại Âm Nhạc</div></Route>
         <Route path="/playlist">playlist</Route>
         <Route path="/users">Thông tin cá nhân</Route>
