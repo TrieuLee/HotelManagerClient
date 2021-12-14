@@ -35,7 +35,7 @@
   font-size: 20px;
   font-weight: 600;
   opacity: 0;
-  transition: all 0.75s ease;
+  transition: all 0.2s ease;
 }
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name{
@@ -147,6 +147,7 @@
 .sidebar li a:hover{
   background: #FFF;
 }
+
 .sidebar li a .links_name{
   color: #fff;
   font-size: 15px;
@@ -248,4 +249,11 @@
   .sidebar li .tooltip{
     display: none;
   }
+}
+.subNav{
+  margin-left: 25px !important;
+  margin-bottom: 8px!important;
+}
+.subNavClose{
+  display:none;
 }
