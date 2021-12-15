@@ -40,6 +40,7 @@
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name{
   opacity: 1;
+  transition: all 0.85s linear 0.35s;
 }
 .sidebar .logo-details #btn{
   position: absolute;
@@ -251,9 +252,17 @@
   }
 }
 .subNav{
+  display:block;
   margin-left: 25px !important;
   margin-bottom: 8px!important;
+  transition: display 20s ease;
+
 }
 .subNavClose{
   display:none;
+  transition: display 20s ease;
 }
+.title{
+  display:none
+}
+
