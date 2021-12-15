@@ -6,13 +6,15 @@ function Router() {
    return (
     <BrowserRouter>
     <Switch>
-        <Route exact path="/">Cc triều</Route>
-        <Route path="/types"><div>Cc Kiệt</div></Route>
-        <Route path="/playlist">playlist</Route>
-        <Route path="/users">Thông tin cá nhân</Route>
-        <Route path="/login">Đăng Nhập</Route>
-        <Route path="/register">Đăng Xuất</Route>
-        <Route path="/aboutUs">Về chúng tôi</Route>
+        <Route exact path="/">Nhân Viên</Route>
+        <Route path="/room"><div>Phòng</div></Route>
+        <Route path="/customer">Khách Hàng</Route>
+        <Route path="/service">Dịch Vụ</Route>
+        <Route path="/bookingRoom">Đặt Phòng</Route>
+        <Route path="/checkoutRoom">Trả Phòng</Route>
+        <Route path="/useService">Sử Dụng Dịch Vụ</Route>
+        <Route path="/roomRevenue">Doanh Thu Phòng</Route>
+        <Route path="/serviceRevenue">Doanh Thu Dịch Vụ</Route>
     </Switch>
     </BrowserRouter>
    )

@@ -25,28 +25,28 @@ function Navbar({openNavbar, setOpenNavbar}) {
             </div>
             <ul className="nav-list">
                 <li>
-                    <a href ="/types">
+                    <a href ="/">
                         <i className='bx bx-user' ><FontAwesomeIcon icon={faIcons} /></i>
                         <span className="links_name">Nhân Viên</span>
                     </a>           
                     <span className="tooltip">Nhân Viên</span>
                 </li>
                 <li>
-                    <a href ="/types">
+                    <a href ="/room">
                         <i className='bx bx-user' ><FontAwesomeIcon icon={faIcons} /></i>
                         <span className="links_name">Phòng</span>
                     </a>            
                     <span className="tooltip">Phòng</span>
                 </li>
                 <li>
-                    <a href ="/types">
+                    <a href ="/customer">
                         <i className='bx bx-user' ><FontAwesomeIcon icon={faIcons} /></i>
                         <span className="links_name">Khách Hàng</span>
                     </a>           
                     <span className="tooltip">Khách Hàng</span>
                 </li>
                 <li>
-                    <a href ="/types">
+                    <a href ="/service">
                         <i className='bx bx-user' ><FontAwesomeIcon icon={faIcons} /></i>
                         <span className="links_name">Dịch Vụ</span>
                     </a>           
@@ -63,21 +63,21 @@ function Navbar({openNavbar, setOpenNavbar}) {
                 </li>
                 
                 <li className={openList&&!openNavbar?'subNav':'subNavClose'}>
-                    <a href = "/">
+                    <a href = "/bookingRoom">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHome} /></i>
                         <span className="links_name">Đặt Phòng</span>
                     </a>
                     <span className="tooltip">Đặt Phòng</span>
                 </li>
                 <li className={openList&&!openNavbar?'subNav':'subNavClose'}>
-                    <a href = "/">
+                    <a href = "/checkoutRoom">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHome} /></i>
                         <span className="links_name">Trả Phòng</span>
                     </a>
                     <span className="tooltip">Trả Phòng</span>
                 </li>
                 <li className={openList&&!openNavbar?'subNav':'subNavClose'}>
-                    <a href = "/">
+                    <a href = "/useService">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHome} /></i>
                         <span className="links_name">Sử Dụng Dịch Vụ</span>
                     </a>
@@ -95,14 +95,14 @@ function Navbar({openNavbar, setOpenNavbar}) {
                 </li>
                 
                 <li className={openListNav&&!openNavbar?'subNav':'subNavClose'}>
-                    <a href = "/">
+                    <a href = "/roomRevenue">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHome} /></i>
                         <span className="links_name">Doanh Thu Phòng</span>
                     </a>
                     <span className="tooltip">Doanh Thu Phòng</span>
                 </li>
                 <li className={openListNav&&!openNavbar?'subNav':'subNavClose'}>
-                    <a href = "/">
+                    <a href = "/serviceRevenue">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHome} /></i>
                         <span className="links_name">Doanh Thu Dịch Vụ</span>
                     </a>
