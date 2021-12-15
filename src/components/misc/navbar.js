@@ -35,7 +35,7 @@ function Navbar({openNavbar, setOpenNavbar}) {
                     <a href ="/types">
                         <i className='bx bx-user' ><FontAwesomeIcon icon={faIcons} /></i>
                         <span className="links_name">Phòng</span>
-                    </a>           
+                    </a>            
                     <span className="tooltip">Phòng</span>
                 </li>
                 <li>
