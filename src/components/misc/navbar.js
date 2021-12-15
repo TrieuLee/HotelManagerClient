@@ -89,9 +89,9 @@ function Navbar({openNavbar, setOpenNavbar}) {
                 <li onClick={() => setOpenListNav(!openListNav)}>
                     <a>
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHome} /></i>
-                        <span className="links_name">Báo cáo</span>
+                        <span className="links_name">Báo Cáo</span>
                     </a>
-                    <span className="tooltip">Báo cáo</span>
+                    <span className="tooltip">Báo Cáo</span>
                 </li>
                 
                 <li className={openListNav&&!openNavbar?'subNav':'subNavClose'}>
