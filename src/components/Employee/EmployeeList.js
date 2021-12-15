@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import Employee from './Employee';
-
+import { EmployeeContext } from '../contexts/EmployeeContext';
 
 const Employeelist = () => {
-    const [employees ,setEmployees] = useState([
-        {id:1, name: 'Thomas Hardy10', email: 'thomashardy@mail.com', address: '89 Chiaroscuro Rd, Portland, USA', phone: '(171) 555-2222'},
-        {id:2, name: 'Thomas Hardy10', email: 'thomashardy@mail.com', address: '89 Chiaroscuro Rd, Portland, USA', phone: '(171) 555-2222'},
-        {id:3, name: 'Thomas Hardy10', email: 'thomashardy@mail.com', address: '89 Chiaroscuro Rd, Portland, USA', phone: '(171) 555-2222'},
-        {id:4, name: 'Thomas Hardy10', email: 'thomashardy@mail.com', address: '89 Chiaroscuro Rd, Portland, USA', phone: '(171) 555-2222'},
-    ])  
+   
+    const {employees} = useContext(EmployeeContext);
     return (
         <>
+
         <div className="table-title">
 				<div className="row">
 					<div className="col-sm-6">
@@ -36,7 +33,7 @@ const Employeelist = () => {
 					
                         {
                             employees.map(employee =>(
-                                <tr>
+                                <tr key ={employee.id}>
                                     <Employee employee = {employee}/>       
                                 </tr>
                             ))

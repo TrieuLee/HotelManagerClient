@@ -3,18 +3,21 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Search from "./components/search/search";
 import Employee from "./components/Employee/Employee";
 import Employeelist from "./components/Employee/EmployeeList";
+import EmployeeContextProvider from "./components/contexts/EmployeeContext";
 function Router() {
    return (
     <BrowserRouter>
     <Switch>
         <Route exact path="/">
         <div className="container-xl">
-        	<div className="table-responsive">
-		        <div className="table-wrapper">
-                    <Employeelist/>
-                </div>
-            </div>
+      <div className="table-responsive">
+        <div className="table-wrapper">
+          <EmployeeContextProvider>
+                <Employeelist />
+          </EmployeeContextProvider>
         </div>
+      </div>
+    </div>
         </Route>
         <Route path="/room"><div>Phòng</div></Route>
         <Route path="/customer">Khách Hàng</Route>
