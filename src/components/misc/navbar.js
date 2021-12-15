@@ -81,7 +81,7 @@ function Navbar({openNavbar, setOpenNavbar}) {
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHome} /></i>
                         <span className="links_name">Sử Dụng Dịch Vụ</span>
                     </a>
-                    <span className="tooltip">Sử Dụng Dịch Vụ</span>
+                    <span className="tooltip">Sử Dụng Dịch Vụ</span> 
                 </li>
                 
                 
