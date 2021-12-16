@@ -1,9 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Search from "./components/search/search";
-import Employee from "./components/Employee/Employee";
-import Employeelist from "./components/Employee/EmployeeList";
-import EmployeeContextProvider from "./components/contexts/EmployeeContext";
+import EmployeeList from "./components/Employee/EmployeeList";
+import Login from "./components/Auth/login";
 function Router() {
    return (
     <BrowserRouter>
@@ -12,9 +10,7 @@ function Router() {
         <div className="container-xl">
       <div className="table-responsive">
         <div className="table-wrapper">
-          <EmployeeContextProvider>
-                <Employeelist />
-          </EmployeeContextProvider>
+                <EmployeeList />
         </div>
       </div>
     </div>
@@ -27,6 +23,8 @@ function Router() {
         <Route path="/useService">Sử Dụng Dịch Vụ</Route>
         <Route path="/roomRevenue">Doanh Thu Phòng</Route>
         <Route path="/serviceRevenue">Doanh Thu Dịch Vụ</Route>
+        <Route path="/login"><Login/></Route>
+        <Route path="/register">Register</Route>
     </Switch>
     </BrowserRouter>
    )

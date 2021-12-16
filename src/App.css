@@ -28,3 +28,20 @@
     background-color: black;
     height: 60px;
 }
+.auth{
+    margin-left: 85%;
+    margin-top: 1%;
+}
+.sign{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-style:initial;
+}
+.sign:hover{
+    text-decoration:underline;
+    color: black;
+}
+.register{
+    margin-left: 5%;
+}

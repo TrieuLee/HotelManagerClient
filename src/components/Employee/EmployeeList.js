@@ -1,10 +1,28 @@
-import React, { useContext } from 'react';
-import Employee from './Employee';
-import { EmployeeContext } from '../contexts/EmployeeContext';
+import React, {useEffect, useState } from 'react';
+import Axios from 'axios';
 
-const Employeelist = () => {
+import Employee from './Employee';
+
+const EmployeeList = () => {
    
-    const {employees} = useContext(EmployeeContext);
+	const [employees, setEmployees] = useState([]);
+
+	useEffect(() =>{
+		getEmployees();
+	},[]);
+
+	async function getEmployees() {
+		const employeeRes = await Axios.get("http://localhost:5000/staff/");
+		setEmployees(employeeRes.data);
+
+	}
+
+	function renderEmployees() {
+		return employees.map((employee,i) =>{
+			return <Employee key={i} employee ={employee} />
+		})
+	}
+
     return (
         <>
 
@@ -17,7 +35,7 @@ const Employeelist = () => {
 						<a href="#addEmployeeModal" className="btn btn-success" data-toggle="modal"><i className="material-icons">&#xE147;</i> <span>Add New Employee</span></a>					
 					</div>
 				</div>
-			</div>
+		</div>
                 
 			<table className="table table-striped table-hover">
 				<thead>
@@ -30,23 +48,11 @@ const Employeelist = () => {
 					</tr>
 				</thead>
 				<tbody>
-					
-                        {
-                            employees.map(employee =>(
-                                <tr key ={employee.id}>
-                                    <Employee employee = {employee}/>       
-                                </tr>
-                            ))
-                        }
-                  
-                  
+					{renderEmployees()}
                 </tbody>
                 </table>
-     
-        
-        
         </>
     );
 }
 
-export default Employeelist;
+export default EmployeeList;

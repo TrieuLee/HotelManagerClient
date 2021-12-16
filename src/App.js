@@ -11,12 +11,10 @@ function App() {
 
         <>
 
-        <nav className='navTitle'>
-            <div>
-            <h1>Hello world!</h1>
-            </div>
-            
-        </nav>
+        <div className = "auth">
+            <a href='/login' className='sign login'>Login</a>
+            <a href= '/register' className='sign register'>Register</a>
+        </div>
          <div className='container-flex'>
         <div className={openNavbar?'set-with-navbar':'set-with-navbar open'}><Navbar
             openNavbar={openNavbar}
