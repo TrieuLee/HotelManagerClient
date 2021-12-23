@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+
 import EmployeeList from "./components/Employee/EmployeeList";
 import Login from "./components/Auth/login";
 function Router() {
@@ -7,13 +9,13 @@ function Router() {
     <BrowserRouter>
     <Switch>
         <Route exact path="/">
-        <div className="container-xl">
-      <div className="table-responsive">
-        <div className="table-wrapper">
-                <EmployeeList />
-        </div>
-      </div>
-    </div>
+          <div className="container-xl">
+            <div className="table-responsive">
+              <div className="table-wrapper">
+                      <EmployeeList />
+              </div>
+            </div>
+          </div>
         </Route>
         <Route path="/room"><div>Phòng</div></Route>
         <Route path="/customer">Khách Hàng</Route>
@@ -24,7 +26,6 @@ function Router() {
         <Route path="/roomRevenue">Doanh Thu Phòng</Route>
         <Route path="/serviceRevenue">Doanh Thu Dịch Vụ</Route>
         <Route path="/login"><Login/></Route>
-        <Route path="/register">Register</Route>
     </Switch>
     </BrowserRouter>
    )
