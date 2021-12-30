@@ -6,6 +6,7 @@ import EmployeeList from "./components/Employee/EmployeeList";
 import Login from "./components/Auth/login";
 import Room from "./components/Room/roomList";
 import Guest from "./components/Guest/guestList";
+import Service from "./components/Service/serviceList";
 function Router() {
    return (
     <BrowserRouter>
@@ -21,7 +22,7 @@ function Router() {
         </Route>
         <Route path="/room"><Room/></Route>
         <Route path="/customer"><Guest/></Route>
-        <Route path="/service">Dịch Vụ</Route>
+        <Route path="/service"><Service/></Route>
         <Route path="/bookingRoom">Đặt Phòng</Route>
         <Route path="/checkoutRoom">Trả Phòng</Route>
         <Route path="/useService">Sử Dụng Dịch Vụ</Route>
