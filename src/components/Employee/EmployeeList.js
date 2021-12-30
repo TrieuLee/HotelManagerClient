@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState } from 'react';
 import Axios from 'axios';
 import Modal from 'react-modal';
+
 import EmployeePost from './EmployeePost';
 import EmployeePut from './EmployeePut';
 import Employee from './Employee';
@@ -30,7 +31,7 @@ const EmployeeList = () => {
 	function renderEmployees() {
 		let sortedEmployees = [...employees];
 		sortedEmployees=sortedEmployees.sort((a,b) =>{
-			return a.name<b.name
+			return a.name-b.name > 0
 		})
 		return sortedEmployees.map((employee,i) =>{
 			return <Employee key={i} employee ={employee}
@@ -61,7 +62,7 @@ const EmployeeList = () => {
         <div className="table-title">
 				<div className="row">
 					<div className="col-sm-6">
-						<h2>Manage <b>Employees</b></h2>
+						<h2>Quản Lý <b>Nhân Viên</b></h2>
 					</div>
 					<div className="col-sm-6">
 						{!employeeCreateOpen && userDecentralize===1&&(
@@ -71,7 +72,7 @@ const EmployeeList = () => {
 								onClick={() => setEmployeeCreateOpen(true)}
 								>
 								<i className="material-icons">&#xE147;</i>
-								<span>Add New Employee</span>
+								<span>Thêm Nhân viên</span>
 							</a>
 						)}
 						<Modal

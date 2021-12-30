@@ -4,6 +4,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import EmployeeList from "./components/Employee/EmployeeList";
 import Login from "./components/Auth/login";
+import Room from "./components/Room/roomList";
+import Guest from "./components/Guest/guestList";
 function Router() {
    return (
     <BrowserRouter>
@@ -17,8 +19,8 @@ function Router() {
             </div>
           </div>
         </Route>
-        <Route path="/room"><div>Phòng</div></Route>
-        <Route path="/customer">Khách Hàng</Route>
+        <Route path="/room"><Room/></Route>
+        <Route path="/customer"><Guest/></Route>
         <Route path="/service">Dịch Vụ</Route>
         <Route path="/bookingRoom">Đặt Phòng</Route>
         <Route path="/checkoutRoom">Trả Phòng</Route>

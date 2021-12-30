@@ -164,3 +164,6 @@ table.table .avatar {
 .modal form label {
 	font-weight: normal;
 }	
+.room-title{
+	margin: 25px 0px 0px 0px !important;
+}
