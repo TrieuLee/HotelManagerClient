@@ -29,5 +29,6 @@
     height: 60px;
 }
 body{
-    background-color: lemonchiffon;
+    background-image: url('/src/markus-spiske-g5ZIXjzRGds-unsplash.jpg');
+    background-size:cover;
 }
