@@ -133,11 +133,10 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                         onChange={(e) => setTypeofRoom(e.target.value)}
                         >
                             <option>Chọn</option>
-                            <option value="Phòng Đơn">Phòng Đơn</option>
-                            <option value="Phòng Đôi">Phòng Đôi</option>
-                            <option value="Phòng Gia Đình">Phòng Gia Đình</option>
-                            <option value="Hoàng Đế">Hoàng Đế</option>
-                            <option value="Trung Bình">Trung Bình</option>
+                            <option value="Phòng đơn">Phòng đơn</option>
+                            <option value="Phòng đôi">Phòng đôi</option>
+                            <option value="VIP đơn">VIP đơn</option>
+                            <option value="VIP đôi">VIP đôi</option>    
                         </select>
                     </td>
                 </tr>

@@ -58,7 +58,7 @@ const GuestList = () => {
         <div className="table-title room-title">
 				<div className="row">
 					<div className="col-sm-6">
-						<h2>Danh Sách <b>Khách Hàng </b></h2>
+						<h2>Danh sách khách hàng</h2>
 					</div>
 					<div className="col-sm-6">
 						{!guestCreateOpen && (
@@ -68,7 +68,7 @@ const GuestList = () => {
 								onClick={() => setGuestCreateOpen(true)}
 								>
 								<i className="material-icons">&#xE147;</i>
-								<span>Thêm Khách Hàng</span>
+								<span>Thêm khách hàng</span>
 							</a>
 						)}
 						<Modal

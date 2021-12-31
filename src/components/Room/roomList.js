@@ -61,7 +61,7 @@ function RoomList() {
             <div className="table-title room-title">
 				<div className="row">
 					<div className="col-sm-6">
-						<h2>Manage <b>Employees</b></h2>
+						<h2>Quản lý phòng</h2>
 					</div>
 					<div className="col-sm-6">
 						<a href="#addEmployeeModal"

@@ -57,7 +57,7 @@ function RoomList() {
             <div className="table-title room-title">
 				<div className="row">
 					<div className="col-sm-6">
-						<h2>Quản Lý <b>Dịch Vụ</b></h2>
+						<h2>Quản lý dịch vụ</h2>
 					</div>
 					<div className="col-sm-6">
 						<a href="#addEmployeeModal"
@@ -66,7 +66,7 @@ function RoomList() {
 							onClick={() => setServiceCreateOpen(true)}
 							>
 							<i className="material-icons">&#xE147;</i>
-							<span>Tạo Dịch Vụ</span>
+							<span>Thêm dịch vụ</span>
 						</a>
 						<Modal
 						isOpen={serviceCreateOpen}

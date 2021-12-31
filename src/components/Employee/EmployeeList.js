@@ -62,7 +62,7 @@ const EmployeeList = () => {
         <div className="table-title">
 				<div className="row">
 					<div className="col-sm-6">
-						<h2>Quản Lý <b>Nhân Viên</b></h2>
+						<h2>Quản lý nhân viên</h2>
 					</div>
 					<div className="col-sm-6">
 						{!employeeCreateOpen && userDecentralize===1&&(

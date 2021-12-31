@@ -10,7 +10,7 @@
 }
 .table-title {        
 	padding-bottom: 15px;
-	background: #435d7d;
+	background: black;
 	color: #fff;
 	padding: 16px 30px;
 	min-width: 100%;
@@ -164,6 +164,12 @@ table.table .avatar {
 .modal form label {
 	font-weight: normal;
 }	
-.room-title{
-	margin: 25px 0px 0px 0px !important;
+
+.btn-success{
+	background-color: rgb(205, 166, 85);
+}
+.btn-success:hover{
+	background-color: white;
+	border: 1px solid rgb(205, 166, 85);
+	color: rgb(205, 166, 85);;
 }

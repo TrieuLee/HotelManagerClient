@@ -20,9 +20,33 @@ function Router() {
             </div>
           </div>
         </Route>
-        <Route path="/room"><Room/></Route>
-        <Route path="/customer"><Guest/></Route>
-        <Route path="/service"><Service/></Route>
+        <Route path="/room">
+        <div className="container-xl">
+            <div className="table-responsive">
+              <div className="table-wrapper">
+                      <Room />
+              </div>
+            </div>
+          </div>
+        </Route>
+        <Route path="/customer">
+        <div className="container-xl">
+            <div className="table-responsive">
+              <div className="table-wrapper">
+                      <Guest />
+              </div>
+            </div>
+          </div>  
+        </Route>
+        <Route path="/service">
+        <div className="container-xl">
+            <div className="table-responsive">
+              <div className="table-wrapper">
+                      <Service />
+              </div>
+            </div>
+          </div>
+        </Route>
         <Route path="/bookingRoom">Đặt Phòng</Route>
         <Route path="/checkoutRoom">Trả Phòng</Route>
         <Route path="/useService">Sử Dụng Dịch Vụ</Route>
