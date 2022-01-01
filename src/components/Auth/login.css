@@ -1,11 +1,7 @@
 .signin-content{
     padding:150px;
-    background-color: aliceblue;
-}
-.signup-content{
-    padding: 150px;
-    background-color: aliceblue;
-  
+    background-color: lemonchiffon;
+    border-radius: 20px;
 }
 
 .text{
@@ -17,32 +13,15 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
-.signup-image{
-    bottom: -40px;
-    margin-left: 650px;
+
+.signin-image{
+    bottom: 80px;
+    margin-left: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position:absolute;
-  
-}
-.signin-image{
-    bottom: 60px;
-    margin-left: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position:absolute;
-}
-
-
-.signup-form,
-.signup-image,
-.signin-form,
-.signin-image{
-    width: auto;
 }
 .form-title{
     margin-bottom: 33px;
@@ -56,13 +35,36 @@
     border-bottom: none;
     width: auto;
 }
-.label{
-    position: absolute;
-    padding: 9px;
-
-}
 .signup-image-link{
     margin-top: 20px;
     font-size: 20px;
     color: black;
+}
+.form-submit{
+    display: inline-block;
+    background: rgb(205, 166, 85);
+    color:#fff;
+    border: none;
+    width: auto;
+    padding: 10px;
+    margin-top  : 15px;
+    
+}
+.inputForm{
+    width: 40%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 12px 30px;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+    background: none;
+}
+::placeholder{
+    color: black;
+}
+label{
+    position: absolute;
+    padding: 14px;
+
 }
