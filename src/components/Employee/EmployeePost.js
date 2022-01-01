@@ -53,13 +53,17 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
        setEmployeeCreateOpen(false);
 	}
 
-   return <div className= "employee-post">
+   return <div onClick={()=>setErrorMessage(null)} className= "employee-post">
+       <div className='titleModal'>
+        <h2>Thêm nhân viên </h2>
+       </div>
+
        <form onSubmit={saveEmployees}>
         <Table borderless>
             {errorMessage && (
                 <ErrorMessage
                 message={errorMessage}
-                clear={() => setErrorMessage(null)}
+              
                 />
             )}
             <tbody>
@@ -68,7 +72,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                         <label htmlFor ='editor-name'>Họ và Tên</label>         
                     </th>
                     <td>
-                        <input id = 'editor-name' 
+                        <input className='formInput' id = 'editor-name' 
                         type = 'text'
                         value={createName}
                         onChange={(e) => setCreateName(e.target.value)}
@@ -80,7 +84,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                         <label htmlFor ='editor-phoneNumber'>SĐT</label>
                     </th>
                     <td>
-                        <input id = 'editor-phoneNumber' 
+                        <input className='formInput' id = 'editor-phoneNumber' 
                         type = 'text' 
                         value={createPhoneNumber}
                         onChange={(e) => setCreatePhoneNumber(e.target.value)}
@@ -92,7 +96,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                         <label htmlFor ='editor-nameOfRoom'>Email</label>                   
                     </th>
                     <td>
-                        <input id = 'editor-nameOfRoom' 
+                        <input className='formInput'id = 'editor-nameOfRoom' 
                         type = 'text' 
                         value={createEmail}
                         onChange={(e) => setCreateEmail(e.target.value)}
@@ -104,7 +108,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                         <label htmlFor ='editor-role'>Vai trò</label>
                     </th>
                     <td>
-                        <input id = 'editor-role' 
+                        <input className='formInput' id = 'editor-role' 
                         type = 'text' 
                         value={createRole}
                         onChange={(e) => setCreateRole(e.target.value)}
@@ -116,7 +120,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                         <label htmlFor ='editor-nameOfRoom'>Phòng Ban</label>                   
                     </th>
                     <td>
-                        <input id = 'editor-nameOfRoom' 
+                        <input className='formInput' id = 'editor-nameOfRoom' 
                         type = 'text' 
                         value={createNameOfRoom}
                         onChange={(e) => setCreateNameOfRoom(e.target.value)}
@@ -128,7 +132,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                         <label htmlFor ='editor-salary'>Lương</label>
                     </th>
                     <td>
-                        <input id = 'editor-salary' 
+                        <input className='formInput' id = 'editor-salary' 
                         type = 'number' 
                         value={createSalary}
                         onChange={(e) => setCreateSalary(e.target.value)}/>
@@ -139,7 +143,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                         <label htmlFor ='editor-password'>Mật Khẩu</label>
                     </th>
                     <td>
-                        <input id = 'editor-password' 
+                        <input className='formInput' id = 'editor-password' 
                         type = 'password' 
                         value={createPassword}
                         onChange={(e) => setCreatePassword(e.target.value)}/>
@@ -150,7 +154,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                         <label htmlFor ='editor-passwordVery'>Xác Thực Mật Khẩu</label>
                     </th>
                     <td>
-                        <input id = 'editor-passwordVery' 
+                        <input className='formInput' id = 'editor-passwordVery' 
                         type = 'password'
                         value={createPasswordVerify}
                         onChange={(e) => setCreatePasswordVerify(e.target.value)}/>
@@ -158,8 +162,8 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
                 </tr>
             </tbody>
         </Table>
-
-         <Button
+        <div className='btn-confirm'>
+        <Button
             type="submit"
             color="success"
             outline>
@@ -171,6 +175,8 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
             type="button" onClick={closeEmployee}>
             Thoát
          </Button>
+        </div>         
+         
       </form>
    </div>;
 };

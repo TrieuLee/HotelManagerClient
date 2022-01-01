@@ -27,7 +27,7 @@ function Navbar({openNavbar, setOpenNavbar}) {
     <>
         <div className={openNavbar?'sidebar':'sidebar open'} >
             <div className="logo-details">
-                <div className="logo_name">Quản Lý Khách Sản</div>
+                <div className="logo_name">Quản lý khách sạn</div>
                 <i className='bx bx-menu' id="btn" onClick={() => setOpenNavbar(!openNavbar)}>
                     <FontAwesomeIcon icon={openNavbar ? faBars : faAngleDoubleLeft} />
                 </i>
@@ -37,9 +37,9 @@ function Navbar({openNavbar, setOpenNavbar}) {
                     <a href ="/">
 
                         <i className='bx bx-user' ><FontAwesomeIcon icon={faUserFriends} /></i>
-                        <span className="links_name">Nhân Viên</span>
+                        <span className="links_name">Nhân viên</span>
                     </a>           
-                    <span className="tooltip">Nhân Viên</span>
+                    <span className="tooltip">Nhân viên</span>
                 </li>
                 <li>
                     <a href ="/room">
@@ -51,47 +51,47 @@ function Navbar({openNavbar, setOpenNavbar}) {
                 <li>
                     <a href ="/customer">
                         <i className='bx bx-user' ><FontAwesomeIcon icon={faCrown} /></i>
-                        <span className="links_name">Khách Hàng</span>
+                        <span className="links_name">Khách hàng</span>
                     </a>           
-                    <span className="tooltip">Khách Hàng</span>
+                    <span className="tooltip">Khách hàng</span>
                 </li>
                 <li>
                     <a href ="/service">
                         <i className='bx bx-user' ><FontAwesomeIcon icon={faShoppingCart} /></i>
-                        <span className="links_name">Dịch Vụ</span>
+                        <span className="links_name">Dịch vụ</span>
                     </a>           
-                    <span className="tooltip">Dịch Vụ</span>
+                    <span className="tooltip">Dịch vụ</span>
                 </li>
 
                 {/* list menu */}
                 <li onClick={() => setOpenList(!openList)}>
                     <a>
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faFilter} /></i>
-                        <span className="links_name">Chức Năng</span>
+                        <span className="links_name">Chức năng</span>
                     </a>
-                    <span className="tooltip">Chức Năng</span>
+                    <span className="tooltip">Chức năng</span>
                 </li>
                 
                 <li className={openList&&!openNavbar?'subNav':'subNavClose'}>
                     <a href = "/bookingRoom">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faCheckSquare} /></i>
-                        <span className="links_name">Đặt Phòng</span>
+                        <span className="links_name">Đặt phòng</span>
                     </a>
-                    <span className="tooltip">Đặt Phòng</span>
+                    <span className="tooltip">Đặt phòng</span>
                 </li>
                 <li className={openList&&!openNavbar?'subNav':'subNavClose'}>
                     <a href = "/checkoutRoom">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faHeartBroken} /></i>
-                        <span className="links_name">Trả Phòng</span>
+                        <span className="links_name">Trả phòng</span>
                     </a>
-                    <span className="tooltip">Trả Phòng</span>
+                    <span className="tooltip">Trả phòng</span>
                 </li>
                 <li className={openList&&!openNavbar?'subNav':'subNavClose'}>
                     <a href = "/useService">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faFunnelDollar} /></i>
-                        <span className="links_name">Sử Dụng Dịch Vụ</span>
+                        <span className="links_name">Sử dụng dịch vụ</span>
                     </a>
-                    <span className="tooltip">Sử Dụng Dịch Vụ</span> 
+                    <span className="tooltip">Sử dụng dịch vụ</span> 
                 </li>
                 
                 
@@ -99,24 +99,24 @@ function Navbar({openNavbar, setOpenNavbar}) {
                 <li onClick={() => setOpenListNav(!openListNav)}>
                     <a>
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faCommentDollar} /></i>
-                        <span className="links_name">Báo Cáo</span>
+                        <span className="links_name">Báo cáo</span>
                     </a>
-                    <span className="tooltip">Báo Cáo</span>
+                    <span className="tooltip">Báo cáo</span>
                 </li>
                 
                 <li className={openListNav&&!openNavbar?'subNav':'subNavClose'}>
                     <a href = "/roomRevenue">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faPoll} /></i>
-                        <span className="links_name">Doanh Thu Phòng</span>
+                        <span className="links_name">Doanh thu phòng</span>
                     </a>
-                    <span className="tooltip">Doanh Thu Phòng</span>
+                    <span className="tooltip">Doanh thu phòng</span>
                 </li>
                 <li className={openListNav&&!openNavbar?'subNav':'subNavClose'}>
                     <a href = "/serviceRevenue">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faSearchDollar} /></i>
-                        <span className="links_name">Doanh Thu Dịch Vụ</span>
+                        <span className="links_name">Doanh thu dịch vụ</span>
                     </a>
-                    <span className="tooltip">Doanh Thu Dịch Vụ</span>
+                    <span className="tooltip">Doanh thu dịch vụ</span>
                 </li>
             </ul>
         </div>

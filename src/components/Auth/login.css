@@ -1,9 +1,6 @@
 .signin-content{
-
     padding:150px;
-
     background-color: aliceblue;
-  
 }
 .signup-content{
     padding: 150px;
@@ -67,6 +64,5 @@
 .signup-image-link{
     margin-top: 20px;
     font-size: 20px;
-   
     color: black;
 }

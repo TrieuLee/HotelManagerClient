@@ -1,9 +1,9 @@
 import React from "react";
-
-function ErrorMessage({message, clear}) {
+import  './errorMess.css'
+function ErrorMessage({message}) {
    return <div className ="error-message">
     <p>{message}</p>
-    <button onClick={clear}>Xóa</button>
+   
    </div>;
 };
 

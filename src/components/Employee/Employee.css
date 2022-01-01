@@ -173,3 +173,20 @@ table.table .avatar {
 	border: 1px solid rgb(205, 166, 85);
 	color: rgb(205, 166, 85);;
 }
+
+.employee-post h2{
+	padding: 20px 40px;
+	background-color: black;
+	color: white;
+	font-size: 20px;
+}
+.employee-post form{
+	padding: 35px;
+}
+.btn-confirm{
+	margin-left: 510px;
+	margin-top: 20px;
+}
+.btn-confirm .btn-outline-success{
+	margin-right: 10px;
+}

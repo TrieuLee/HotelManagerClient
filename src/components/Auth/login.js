@@ -44,13 +44,13 @@ const SignIn = () => {
                         
                         </div>
 
-                        <div className="signup-form">
+                        <div onClick={()=>setErrorMessage(null)} className="signup-form">
                             <h2 className="form-title">Đăng nhập</h2>
                             <form onSubmit={authLogin} className="register-form" id="register-form">
                                 {errorMessage && (
                                 <ErrorMessage
                                 message={errorMessage}
-                                clear={() => setErrorMessage(null)}
+                              
                                 />
                                 )}
                                 

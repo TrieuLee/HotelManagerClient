@@ -35,13 +35,13 @@ function RoomEditor({getServices,setServiceCreateOpen}) {
         setServiceCreateOpen(false);
 	}
 
-   return <div className= "employee-post">
+   return <div onClick={()=>setErrorMessage(null)} className= "employee-post">
        <form onSubmit={saveService}>
         <Table borderless>
             {errorMessage && (
                 <ErrorMessage
                 message={errorMessage}
-                clear={() => setErrorMessage(null)}
+                
                 />
             )}
             <tbody>

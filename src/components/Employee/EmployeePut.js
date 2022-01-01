@@ -2,7 +2,7 @@ import React, {useEffect, useState } from 'react';
 import { Table, Button } from 'reactstrap';
 import Axios from 'axios';
 import ErrorMessage from '../misc/ErrorMessage';
-
+import './employeePost.css'
 
 function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
 
@@ -59,13 +59,13 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
          setEmployeeEditorOpen(false);
 	}
 
-   return <div className= "employee-post">
+   return <div onClick={()=>setErrorMessage(null)} className= "employee-post">
       <form onSubmit={saveEmployees}>
         <Table borderless>
             {errorMessage && (
                 <ErrorMessage
                 message={errorMessage}
-                clear={() => setErrorMessage(null)}
+                
                 />
             )}
             <tbody>
@@ -74,8 +74,8 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
                         <label htmlFor ='editor-name'>Họ và Tên</label>         
                     </th>
                     <td>
-                        <input id = 'editor-name' 
-                        type = 'text'
+                        <input className='formInput' id = 'editor-name' 
+                        type =  'text'
                         value={createName}
                         onChange={(e) => setCreateName(e.target.value)}
                         />
@@ -86,7 +86,7 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
                         <label htmlFor ='editor-phoneNumber'>SĐT</label>
                     </th>
                     <td>
-                        <input id = 'editor-phoneNumber' 
+                        <input className='formInput'id = 'editor-phoneNumber' 
                         type = 'text' 
                         value={createPhoneNumber}
                         onChange={(e) => setCreatePhoneNumber(e.target.value)}
@@ -98,7 +98,7 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
                         <label htmlFor ='editor-role'>Vai trò</label>
                     </th>
                     <td>
-                        <input id = 'editor-role' 
+                        <input className='formInput' id = 'editor-role' 
                         type = 'text' 
                         value={createRole}
                         onChange={(e) => setCreateRole(e.target.value)}
@@ -110,7 +110,7 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
                         <label htmlFor ='editor-nameOfRoom'>Phòng Ban</label>                   
                     </th>
                     <td>
-                        <input id = 'editor-nameOfRoom' 
+                        <input className='formInput'id = 'editor-nameOfRoom' 
                         type = 'text' 
                         value={createNameOfRoom}
                         onChange={(e) => setCreateNameOfRoom(e.target.value)}
@@ -122,7 +122,7 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
                         <label htmlFor ='editor-salary'>Lương</label>
                     </th>
                     <td>
-                        <input id = 'editor-salary' 
+                        <input className='formInput' id = 'editor-salary' 
                         type = 'number' 
                         value={createSalary}
                         onChange={(e) => setCreateSalary(e.target.value)}/>
