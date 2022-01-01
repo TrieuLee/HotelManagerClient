@@ -37,11 +37,8 @@ const SignIn = () => {
         <section className="sign-in">
                 <div className="container mt-5">
                     <div className="signin-content">
-
                         <div className="signin-image">
-                        
-                            <img src="assets/img/about/2.png" alt="" />
-                        
+                         
                         </div>
 
                         <div onClick={()=>setErrorMessage(null)} className="signup-form">
@@ -50,22 +47,24 @@ const SignIn = () => {
                                 {errorMessage && (
                                 <ErrorMessage
                                 message={errorMessage}
-                              
                                 />
                                 )}
                                 
                                 <div className="form-group">
-                                    <label className='label' htmlFor="email"></label>
-                                    <input className='text' type="email" name="email" id="email" autoComplete="off"
+                                    <label className='label' htmlFor="email">
+                                    <i class="zmdi zmdi-email material-icons-name"></i>
+                                    </label>
+                                    <input className="inputForm"  type="email" name="email" id="email" autoComplete="off"
                                         placeholder="Email"
                                         value={formEmail}
                                         onChange={(e) => setFormEmail(e.target.value)}
                                     />
                                 </div>
-                               
                                 <div className="form-group">
-                                    <label className='label' htmlFor="password"></label>
-                                    <input className='text' type="password" name="password" id="password" autoComplete="off"
+                                    <label className='label' htmlFor="password">
+                                        <i class="zmdi zmdi-email material-icons-name"></i>
+                                    </label>
+                                    <input className="inputForm"  type="password" name="password" id="password" autoComplete="off"
                                         placeholder="Mật khẩu"
                                         value={formPassword}
                                         onChange={(e) => setFormPassword(e.target.value)}
