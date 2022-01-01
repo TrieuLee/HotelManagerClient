@@ -3,6 +3,8 @@
     display: flex;
     font-weight: bold;
     position:absolute;
+    top:80px;
+    margin-left: 15px;
     
 }
 .error-message button{

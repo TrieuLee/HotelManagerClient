@@ -48,6 +48,9 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
 	}
 
    return <div onClick={()=>setErrorMessage(null)} className= "employee-post">
+       <div className='titleModal'>
+        <h2>Tạo phòng </h2>
+       </div>
        <form onSubmit={saveRoom}>
         <Table borderless>
             {errorMessage && (
@@ -62,7 +65,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                         <label htmlFor ='number'>Số Phòng</label>         
                     </th>
                     <td>
-                        <input id = 'number' 
+                        <input className='roomInput'id = 'number' 
                         type = 'number'
                         value={number}
                         onChange={(e) => setNumber(e.target.value)}
@@ -74,7 +77,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                         <label htmlFor ='floor'>Tầng</label>
                     </th>
                     <td>
-                        <input id = 'floor' 
+                        <input className='roomInput' id = 'floor' 
                         type = 'number' 
                         value={floor}
                         onChange={(e) => setFloor(e.target.value)}
@@ -86,7 +89,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                         <label htmlFor ='price'>Giá Phòng</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='roomInput' id = 'price' 
                         type = 'number' 
                         value={price}
                         onChange={(e) => setPrice(e.target.value)}
@@ -98,7 +101,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                         <label htmlFor ='note'>Ghi Chú</label>
                     </th>
                     <td>
-                        <select id="note"
+                        <select className='roomInput' id="note"
                         value={note}
                         onChange={(e) => setNote(e.target.value)}
                         >
@@ -113,7 +116,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                         <label htmlFor ='state'>Tình trạng phòng</label>                   
                     </th>
                     <td>
-                        <select id="state"
+                        <select className='roomInput' id="state"
                         value={state}
                         onChange={(e) => setState(e.target.value)}
                         >
@@ -128,7 +131,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                         <label htmlFor ='typeofRoom'>Loại phòng</label>
                     </th>
                     <td>
-                        <select id="typeofRoom"
+                        <select className='roomInput' id="typeofRoom"
                         value={typeofRoom}
                         onChange={(e) => setTypeofRoom(e.target.value)}
                         >
@@ -142,7 +145,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                 </tr>
             </tbody>
         </Table>
-
+        <div className='btn-confirm'>          
          <Button
             type="submit"
             color="success"
@@ -155,6 +158,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
             type="button" onClick={closeRoom}>
             Thoát
          </Button>
+         </div>
       </form>
    </div>;
 };

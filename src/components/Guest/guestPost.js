@@ -51,6 +51,9 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
 	}
 
    return <div onClick={()=>setErrorMessage(null)} className= "employee-post">
+        <div className='titleModal'>
+        <h2>Thêm khách hàng </h2>
+       </div>
        <form onSubmit={saveRoom}>
         <Table borderless>
             {errorMessage && (
@@ -65,7 +68,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
                         <label htmlFor ='number'>Họ và Tên</label>         
                     </th>
                     <td>
-                        <input id = 'number' 
+                        <input className='formInput' id = 'number' 
                         type = 'text'
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -77,7 +80,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
                         <label htmlFor ='floor'>SĐT</label>
                     </th>
                     <td>
-                        <input id = 'floor' 
+                        <input className='formInput' id = 'floor' 
                         type = 'text' 
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
@@ -89,7 +92,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
                         <label htmlFor ='price'>Email</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='formInput' id = 'price' 
                         type = 'email' 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
@@ -101,7 +104,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
                         <label htmlFor ='price'>Địa Chỉ</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='formInput' id = 'price' 
                         type = 'text' 
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
@@ -113,7 +116,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
                         <label htmlFor ='price'>CMND/CCCD</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='formInput'id = 'price' 
                         type = 'text' 
                         value={IDCard}
                         onChange={(e) => setIDCard(e.target.value)}
@@ -125,7 +128,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
                         <label htmlFor ='price'>Mật Khẩu</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='formInput' id = 'price' 
                         type = 'password' 
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -137,7 +140,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
                         <label htmlFor ='price'>Xác thực Mật khẩu</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='formInput' id = 'price' 
                         type = 'password' 
                         value={passwordVerify}
                         onChange={(e) => setPasswordVerify(e.target.value)}
@@ -147,7 +150,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
                
             </tbody>
         </Table>
-
+        <div className='btn-confirm'>       
          <Button
             type="submit"
             color="success"
@@ -160,6 +163,7 @@ function GuestPost({getGuests,setGuestCreateOpen}) {
             type="button" onClick={closeGuest}>
             Thoát
          </Button>
+         </div>
       </form>
    </div>;
 };

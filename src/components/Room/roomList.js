@@ -6,7 +6,7 @@ import RoomEdit from './roomEdit';
 import RoomPut from './roomPut';
 import UserContext from '../../context/UserContext';
 import Room from './room';
-import '../Employee/Employee.css';
+import './room.css';
 
 function RoomList() {
 
@@ -54,6 +54,8 @@ function RoomList() {
 		  bottom: 'auto',
 		  marginRight: '-50%',
 		  transform: 'translate(-50%, -50%)',
+		  padding:'0',
+		  border:'0',
 		},
 	  };
    
