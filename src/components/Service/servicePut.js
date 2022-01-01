@@ -48,6 +48,9 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
 	}
 
    return <div onClick={()=>setErrorMessage(null)} className= "employee-post">
+        <div className='titleModal'>
+        <h2>Thông tin dịch vụ </h2>
+       </div>
        <form onSubmit={saveService}>
         <Table borderless>
             {errorMessage && (
@@ -62,7 +65,7 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
                         <label htmlFor ='name'>Tên Dịch vụ</label>         
                     </th>
                     <td>
-                        <input id = 'name' 
+                        <input className='formInput' id = 'name' 
                         type = 'text'
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -74,7 +77,7 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
                         <label htmlFor ='price'>Giá Dịch vụ</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='formInput' id = 'price' 
                         type = 'number' 
                         value={price}
                         onChange={(e) => setPrice(e.target.value)}
@@ -85,11 +88,12 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
             </tbody>
         </Table>
 
+        <div className='btn-confirm'>
          <Button
             type="submit"
             color="success"
             outline>
-            Cập Nhập
+            Tạo mới
          </Button>
          <Button
             color="danger"
@@ -97,6 +101,7 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
             type="button" onClick={closeService}>
             Thoát
          </Button>
+         </div>
       </form>
    </div>;
 };
