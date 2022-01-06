@@ -40,7 +40,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
 	function closeRoom(){
 	    setNumber(0);
 	    setFloor(0);
-		setPrice(0);
+		setPrice(0); 
 		setNote("");
 		setState(false);
 		setTypeofRoom("");
