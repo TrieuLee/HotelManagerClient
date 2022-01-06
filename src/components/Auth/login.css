@@ -50,7 +50,7 @@
 
 .form-submit{
     display: inline-block;
-    background: rgb(205, 166, 85);
+    background: black;
     color:#fff;
     border: none;
     width: auto;
@@ -59,7 +59,7 @@
     
 }
 .signup-image-link{
-    margin-top: 20px;
+    margin-top: 20px; 
     font-size: 20px;
     color: black;
 }
