@@ -65,7 +65,7 @@ function RoomEditor({getRooms,setRoomCreateOpen}) {
                         <label htmlFor ='number'>Số Phòng</label>         
                     </th>
                     <td>
-                        <input className='roomInput'id = 'number' 
+                        <input  id = 'number' 
                         type = 'number'
                         value={number}
                         onChange={(e) => setNumber(e.target.value)}

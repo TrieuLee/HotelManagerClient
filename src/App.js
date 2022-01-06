@@ -19,8 +19,8 @@ function App() {
             <div className='container-flex'>
             <div className={openNavbar?'set-with-navbar':'set-with-navbar open'}><Navbar
                 openNavbar={openNavbar}
-                setOpenNavbar={setOpenNavbar}
-            /></div>
+                setOpenNavbar={setOpenNavbar}/>
+            </div>
                  <div className={openNavbar?'set-with-router':'set-with-router-open'}><Router/></div>
             </div>
             
