@@ -62,7 +62,8 @@ function RoomList() {
 						<h2>Quản lý dịch vụ</h2>
 					</div>
 					<div className="col-sm-6">
-						<a href="#addEmployeeModal"
+						{!serviceCreateOpen && user && (
+							<a href="#addEmployeeModal"
 							className="btn btn-success"
 							data-toggle="modal"
 							onClick={() => setServiceCreateOpen(true)}
@@ -70,6 +71,8 @@ function RoomList() {
 							<i className="material-icons">&#xE147;</i>
 							<span>Thêm dịch vụ</span>
 						</a>
+						)}
+						
 						<Modal
 						isOpen={serviceCreateOpen}
 						style={customStyles}
