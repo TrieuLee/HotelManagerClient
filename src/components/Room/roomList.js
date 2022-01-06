@@ -24,7 +24,6 @@ function RoomList() {
 
     async function getRooms() {
 		const roomData = await Axios.get("http://localhost:5000/room/");
-        console.log(roomData)
 		setRooms(roomData.data);	
 	}
 
@@ -66,7 +65,8 @@ function RoomList() {
 						<h2>Quản lý phòng</h2>
 					</div>
 					<div className="col-sm-6">
-						<a href="#addEmployeeModal"
+						{!roomCreateOpen && user && (
+							<a href="#addEmployeeModal"
 							className="btn btn-success"
 							data-toggle="modal"
 							onClick={() => setRoomCreateOpen(true)}
@@ -74,6 +74,8 @@ function RoomList() {
 							<i className="material-icons">&#xE147;</i>
 							<span>Tạo Phòng</span>
 						</a>
+						)}
+						
 						<Modal
 						isOpen={roomCreateOpen}
 						style={customStyles}

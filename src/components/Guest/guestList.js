@@ -63,7 +63,7 @@ const GuestList = () => {
 						<h2>Danh sách khách hàng</h2>
 					</div>
 					<div className="col-sm-6">
-						{!guestCreateOpen && (
+						{!guestCreateOpen && user && (
 							<a href="#addEmployeeModal"
 								className="btn btn-success"
 								data-toggle="modal"
