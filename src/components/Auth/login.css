@@ -1,12 +1,8 @@
 .signin-content{
     padding:150px;
-    background-color: aliceblue;
+    background-color: lemonchiffon;
 }
-.signup-content{
-    padding: 150px;
-    background-color: aliceblue;
-  
-}
+
 
 .text{
     width: 40%;
@@ -25,7 +21,6 @@
     align-items: center;
     flex-direction: column;
     position:absolute;
-  
 }
 .signin-image{
     bottom: 60px;
@@ -51,10 +46,13 @@
 
 .form-submit{
     display: inline-block;
-    background: #6dabe4;
+    background: rgb(205, 166, 85);
     color:#fff;
-    border-bottom: none;
+    border: none;
     width: auto;
+    padding: 10px;
+
+    
 }
 .label{
     position: absolute;
