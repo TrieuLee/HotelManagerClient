@@ -51,6 +51,9 @@ function GuestPost({getGuests,setGuestEditorOpen,editGuestData}) {
 	}
 
    return <div onClick={()=>setErrorMessage(null)} className= "employee-post">
+        <div className='titleModal'>
+        <h2>Thông tin khách hàng </h2>
+       </div>
        <form onSubmit={saveRoom}>
         <Table borderless>
             {errorMessage && (
@@ -65,7 +68,7 @@ function GuestPost({getGuests,setGuestEditorOpen,editGuestData}) {
                         <label htmlFor ='number'>Họ và Tên</label>         
                     </th>
                     <td>
-                        <input id = 'number' 
+                        <input className='formInput' id = 'number' 
                         type = 'text'
                         value={name}
                         onChange={(e) => setName(e.target.value)}
@@ -78,7 +81,7 @@ function GuestPost({getGuests,setGuestEditorOpen,editGuestData}) {
                         <label htmlFor ='floor'>SĐT</label>
                     </th>
                     <td>
-                        <input id = 'floor' 
+                        <input className='formInput' id = 'floor' 
                         type = 'text' 
                         value={phoneNumber}
                         onChange={(e) => setPhoneNumber(e.target.value)}
@@ -92,7 +95,7 @@ function GuestPost({getGuests,setGuestEditorOpen,editGuestData}) {
                         <label htmlFor ='price'>Địa Chỉ</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='formInput' id = 'price' 
                         type = 'text' 
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
@@ -105,7 +108,7 @@ function GuestPost({getGuests,setGuestEditorOpen,editGuestData}) {
                         <label htmlFor ='price'>CMND/CCCD</label>                   
                     </th>
                     <td>
-                        <input id = 'price' 
+                        <input className='formInput' id = 'price' 
                         type = 'text' 
                         value={IDCard}
                         onChange={(e) => setIDCard(e.target.value)}
@@ -116,11 +119,12 @@ function GuestPost({getGuests,setGuestEditorOpen,editGuestData}) {
             </tbody>
         </Table>
 
+        <div className='btn-confirm'>       
          <Button
             type="submit"
             color="success"
             outline>
-            Chỉnh sửa
+            Tạo mới
          </Button>
          <Button
             color="danger"
@@ -128,6 +132,7 @@ function GuestPost({getGuests,setGuestEditorOpen,editGuestData}) {
             type="button" onClick={closeGuest}>
             Thoát
          </Button>
+         </div>
       </form>
    </div>;
 };

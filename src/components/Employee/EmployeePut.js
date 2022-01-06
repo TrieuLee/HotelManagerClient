@@ -60,6 +60,10 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
 	}
 
    return <div onClick={()=>setErrorMessage(null)} className= "employee-post">
+        <div className='titleModal'>
+        <h2>Thông tin nhân viên </h2>
+       </div>
+
       <form onSubmit={saveEmployees}>
         <Table borderless>
             {errorMessage && (
@@ -130,6 +134,7 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
                 </tr>
             </tbody>
         </Table>
+        <div className='btn-confirm'>
         <Button
             type="submit"
             color="success"
@@ -142,6 +147,7 @@ function EmployeePost({getEmployees,setEmployeeEditorOpen,editEmployeeData}) {
             type="button" onClick={closeEmployee}>
             Thoát
          </Button>
+        </div>    
         </form>
    </div>;
 };

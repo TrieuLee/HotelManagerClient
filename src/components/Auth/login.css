@@ -1,17 +1,20 @@
 .signin-content{
     padding:150px;
+
     background-color: aliceblue;
 }
 
-.signup-image{
-    bottom: -40px;
-    margin-left: 650px;
+
+
+.signin-image{
+    bottom: 80px;
+    margin-left: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position:absolute;
-  
+
 }
 .signin-image{
     bottom: 60px;
@@ -37,18 +40,44 @@
 
 .form-submit{
     display: inline-block;
-    background: #6dabe4;
+    background: black;
     color:#fff;
-    border-bottom: none;
+    border: none;
     width: auto;
-}
-.label{
-    position: absolute;
-    padding: 9px;
+    padding: 10px;
 
+    
 }
 .signup-image-link{
-    margin-top: 20px;
+    margin-top: 20px; 
     font-size: 20px;
     color: black;
+}
+.form-submit{
+    display: inline-block;
+    background: rgb(205, 166, 85);
+    color:#fff;
+    border: none;
+    width: auto;
+    padding: 10px;
+    margin-top  : 15px;
+    
+}
+.inputForm{
+    width: 40%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 12px 30px;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+    background: none;
+}
+::placeholder{
+    color: black;
+}
+label{
+    position: absolute;
+    padding: 14px;
+
 }
