@@ -2,21 +2,7 @@
     padding:150px;
     background-color: aliceblue;
 }
-.signup-content{
-    padding: 150px;
-    background-color: aliceblue;
-  
-}
 
-.text{
-    width: 40%;
-    display: block;
-    border: none;
-    border-bottom: 1px solid #999;
-    padding: 12px 30px;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
-}
 .signup-image{
     bottom: -40px;
     margin-left: 650px;
