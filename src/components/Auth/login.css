@@ -1,6 +1,7 @@
 .signin-content{
     padding:150px;
-    background-color: aliceblue;
+    background-color: lemonchiffon;
+    border-radius: 20px;
 }
 
 
@@ -47,10 +48,13 @@
 
 .form-submit{
     display: inline-block;
-    background: #6dabe4;
+    background: rgb(205, 166, 85);
     color:#fff;
-    border-bottom: none;
+    border: none;
     width: auto;
+    padding: 10px;
+    margin-top  : 15px;
+    
 }
 .label{
     position: absolute;
@@ -61,4 +65,14 @@
     margin-top: 20px;
     font-size: 20px;
     color: black;
+}
+.inputForm{
+    width: 40%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 12px 30px;
+    font-family: "Arial", sans-serif;
+    box-sizing: border-box;
+    background: none;
 }

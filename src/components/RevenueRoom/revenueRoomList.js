@@ -49,8 +49,16 @@ function RoomList({payBill}) {
       {
           user!==null && (
               <>
-              <div>
-                        <label className="lblColor" htmlFor ='typeofRoom'>Ngày thuê</label>
+               <div className="table-title" >
+				<div className="row">
+					<div className="col-sm-6">
+						<h2>Doanh thu phòng</h2>
+					</div>
+			</div>	
+			</div>
+              <div className='lblDate' style={{marginTop:'20px'}}>
+              <div className='lblcheckIn'>
+                        <label className="lblColor"  style={{marginRight:'10px'}} htmlFor ='typeofRoom'>Ngày thuê</label>
                         <input id = 'typeofRoom' 
                         type = 'date' 
                         value={dateIn}
@@ -59,8 +67,8 @@ function RoomList({payBill}) {
                         
                         />
                 </div> 
-                <div>
-                        <label className="lblColor" htmlFor ='typeofRoom'>Ngày trả phòng</label>
+                <div className='lblcheckOut'>
+                        <label className="lblColor" style={{marginRight:'10px'}} htmlFor ='typeofRoom'>Ngày trả phòng</label>
                         <input id = 'typeofRoom' 
                         type = 'date' 
                         value={dateOut}
@@ -68,13 +76,15 @@ function RoomList({payBill}) {
                         className='roomInput'
                         
                         />
-                        <label className="lblColor" onClick={getRooms} htmlFor ='typeofRoom'>Ngày trả phòng</label>
+                        <label className="lblColor"  style={{marginLeft:'50px',background:'rgb(205, 166, 85)', padding:'5px', cursor:'pointer'}}onClick={getRooms} htmlFor ='typeofRoom'>Thống kê</label>
                 </div>
+              </div>
+              
               {rooms.length > 0 ? <>
                 {renderEmployees()}
                 Tổng doanh thu :{totalPrice}
               </> : (
-					<h3>Bạn chưa thuê Phòng. Hãy đặt phòng yêu thích của bạn.</h3>
+					<h3  style={{marginTop:'10px'}}>Vui lòng nhập dữ liệu để được thống kê.</h3>
 				)}</>
                 
           )

@@ -23,73 +23,41 @@ function Room({room}) {
 	}
 
     return (
-        <>
-
+        <>	
+			
 			{errorMessage && (
 				<ErrorMessage
 				message={errorMessage}/>
 			)}
-			<table>
+		
 				<tr>
-					<th>Số Phòng: </th>
 					<td>{room.number}</td>
-				</tr>
-				<tr>
-					<th>Tầng</th>
-					<td>{room.floor}</td>
-				</tr>
-				<tr>
-					<th>Giá</th>
-					<td>{room.price}</td>
-				</tr>
-				<tr>
-					<th>Loại Phòng</th>
 					<td>{room.typeofRoom}</td>
-				</tr>
-				<tr>
-					<th>Ngày thuê</th>
+					<td>{room.price}</td>
 					<td>{room.checkIn}</td>
-				</tr>
-				<tr>
-					<th>Ngày trả phòng</th>
 					<td>{room.checkOut}</td>  
-				</tr>
-				<tr>
-					<th>Tổng tiền</th>
 					<td>{room.price*(parseInt(room.checkOut.slice(8))-parseInt(room.checkIn.slice(8)))}</td>
-				</tr>
-				<tr>
-					<th>Tình trạng thanh toán</th>
 					<td>{room.stateGiveMoney?'Đã thanh toán':'Chưa thanh toán'}</td>
-				</tr>
-				<tr>
-					<th>Tên khách hàng</th>
 					<td>{room.name}</td>
-				</tr>
-				<tr>
-					<th>Số điện thoại</th>
 					<td>{room.phoneNumber}</td>
+					<td>
+					
+						<Button
+							
+							color="danger"
+							outline
+							type="button"
+							onClick={saveRoom}  >
+							Trả phòng	
+						</Button>	
+				
+					</td>
 				</tr>
-				<tr>
-					<th>Email</th>
-					<td>{room.email}</td>
-				</tr>
-				<tr>
-					<th>Địa chỉ</th>
-					<td>{room.email}</td>
-				</tr>
-				<tr>
-					<th>CMND/CCCD</th>
-					<td>{room.IDCard}</td>
-				</tr>
-			</table>
-			<Button
-				color="danger"
-				outline
-				type="button"
-				onClick={saveRoom}  >
-				Thanh Toán
-			</Button>
+		
+			
+				
+		
+			
 		</>
         
     );

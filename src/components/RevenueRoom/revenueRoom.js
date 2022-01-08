@@ -3,6 +3,8 @@ import {Button } from 'reactstrap';
 import {useHistory } from 'react-router-dom';
 import Axios from 'axios';
 import ErrorMessage from '../misc/ErrorMessage';
+import './RevenueRoom.css'	;
+
 function Room({room}) {
 
 	const history = useHistory();
@@ -24,68 +26,43 @@ function Room({room}) {
 
     return (
         <>
-
+			
 			{errorMessage && (
 				<ErrorMessage
 				message={errorMessage}/>
 			)}
-			<table>
-				<tr>
-					<th>Số Phòng: </th>
-					<td>{room.number}</td>
+			<table className="table table-striped table1">
+			
+				<tr className='trRom' >
+					<th className='thRom'>Số phòng </th>
+					<th className='thRom'>Tầng</th>
+					<th className='thRom'>Giá</th>
+					<th className='thRom'>Loại phòng</th>
+					<th className='thRom'>Ngày thuê</th>
+					<th className='thRom'>Ngày trả phòng</th>
+					<th className='thRom'>Tổng tiền</th>
+					<th className='thRom'>Tình trạng</th>
+					<th className='thRom'>Tên khách hàng</th>
+					<th className='thRom'>Số điện thoại</th>
+					<th className='thRom'>Email</th>
+					<th className='thRom'>Địa chỉ</th>
+					<th className='thRom'>CMND/CCCD</th>
 				</tr>
-				<tr>
-					<th>Tầng</th>
-					<td>{room.floor}</td>
-				</tr>
-				<tr>
-					<th>Giá</th>
-					<td>{room.price}</td>
-				</tr>
-				<tr>
-					<th>Loại Phòng</th>
-					<td>{room.typeofRoom}</td>
-				</tr>  
-				<tr>
-					<th>Ngày thuê</th>
-					<td>({room.checkIn}</td>
-				</tr>
-				<tr>
-					<th>Ngày trả phòng</th>
-					<td>{room.checkOut}</td>
-				</tr>
-				<tr>
-					<th>Tổng tiền</th>
-					<td>{room.price*(parseInt(room.checkOut.slice(8))-parseInt(room.checkIn.slice(8)))}</td>
-				</tr>
-				<tr>
-					<th>Tình trạng thanh toán</th>
-					<td>{room.stateGiveMoney?'Đã thanh toán':'Chưa thanh toán'}</td>
-				</tr>
-				<tr>
-					<th>Tên khách hàng</th>
-					<td>{room.name}</td>
-				</tr>
-				<tr>
-					<th>Số điện thoại</th>
-					<td>{room.phoneNumber}</td>
-				</tr>
-				<tr>
-					<th>Email</th>
-					<td>{room.email}</td>
-				</tr>
-				<tr>
-					<th>Địa chỉ</th>
-					<td>{room.email}</td>
-				</tr>
-				<tr>
-					<th>CMND/CCCD</th>
-					<td>{room.IDCard}</td>
-				</tr>
-                <tr>
-					<th>CMND/CCCD</th>
-					<td>{Date.parse(room.createdAt)}</td>
-				</tr>
+				<tbody className='tbRom' >
+					<td className='tdRom'>{room.number}</td>
+					<td className='tdRom'>{room.floor}</td>
+					<td className='tdRom'>{room.price}</td>
+					<td className='tdRom'>{room.typeofRoom}</td>
+					<td className='tdRom'>{room.checkIn}</td>
+					<td className='tdRom'>{room.checkOut}</td>
+					<td className='tdRom'>{room.price*(parseInt(room.checkOut.slice(8))-parseInt(room.checkIn.slice(8)))}</td>
+					<td className='tdRom'>{room.stateGiveMoney?'Đã thanh toán':'Chưa thanh toán'}</td>
+					<td className='tdRom'>{room.name}</td>
+					<td className='tdRom'>{room.phoneNumber}</td>
+					<td className='tdRom'>{room.email}</td>
+					<td className='tdRom'>{room.IDCard}</td>
+					<td className='tdRom'>{Date.parse(room.createdAt)}</td>
+				</tbody>
                 
 			</table>
 

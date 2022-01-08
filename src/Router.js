@@ -50,10 +50,31 @@ function Router() {
             </div>
           </div>
         </Route>
-        <Route path="/bookingRoom"><BookRoom payBill={true}/></Route>
+
+        <Route path="/bookingRoom">
+        <div className="container-xl">
+            <div className="table-responsive">
+              <div className="table-wrapper">
+              <BookRoom payBill={true}/>
+              </div>
+            </div>
+          </div>
+          </Route>
         <Route path="/checkoutRoom"><BookRoom payBill={false}/></Route>
         <Route path="/useService"><BookService payBill={true}/></Route>
-        <Route path="/roomRevenue"><Revenus payBill={true}/></Route>
+        
+        <Route path="/roomRevenue">
+        <div className="container-xl">
+            <div className="table-responsive">
+              <div className="table-wrapper">
+              <Revenus payBill={true}/>
+              </div>
+            </div>
+          </div>
+        
+          
+          
+          </Route>
         <Route path="/serviceRevenue">Doanh Thu Dịch Vụ</Route>
         <Route path="/login"><Login/></Route>
     </Switch>

@@ -1,0 +1,32 @@
+table.table .trRom .thRom{
+    padding: 18px 0px;
+    text-align: center;
+    background-color: blanchedalmond;
+    border: 1px solid black;
+}	
+table .tbRom {
+  border-left: 1px solid black;
+  border-right: 1px solid red
+}
+table .tbRom .tdRom{
+    border: 1px solid black !important;
+    text-align: center;
+}
+
+.thRom{
+	
+     
+}  
+.table td{
+    padding: none !important;
+    
+}
+
+.lblDate{
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+.lblcheckIn{
+    margin-right: 100px;
+}
