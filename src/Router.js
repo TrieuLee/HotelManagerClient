@@ -8,7 +8,8 @@ import Room from "./components/Room/roomList";
 import Guest from "./components/Guest/guestList";
 import Service from "./components/Service/serviceList";
 import BookRoom from "./components/BookRoom/bookRoomList";
-import Revenus from "./components/RevenueRoom/revenueRoomList";
+import RevenusRoom from "./components/RevenueRoom/revenueRoomList";
+import RevenusService from "./components/RevenueService/revenusSeviceList";
 import BookService from "./components/BookService/bookServiceList";
 function Router() {
    return (
@@ -67,7 +68,7 @@ function Router() {
         <div className="container-xl">
             <div className="table-responsive">
               <div className="table-wrapper">
-              <Revenus payBill={true}/>
+              <RevenusRoom payBill={false}/>
               </div>
             </div>
           </div>
@@ -75,7 +76,7 @@ function Router() {
           
           
           </Route>
-        <Route path="/serviceRevenue">Doanh Thu Dịch Vụ</Route>
+        <Route path="/serviceRevenue"><RevenusService payBill={true}/></Route>
         <Route path="/login"><Login/></Route>
     </Switch>
     </BrowserRouter>
