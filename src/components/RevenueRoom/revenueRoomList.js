@@ -20,9 +20,14 @@ function RoomList({payBill}) {
 		const roomData = await Axios.get("http://localhost:5000/bookRoom/manager");
 		let sortedEmployees  = [...roomData.data];
 		sortedEmployees = sortedEmployees.filter(a => a.stateGiveMoney===payBill && Date.parse(dateIn)<=Date.parse(a.checkOut)&& Date.parse(dateOut)>=Date.parse(a.checkOut));
-        
-       
-        if(sortedEmployees.length>0)setTotalPrice(sortedEmployees.reduce((a,b) => a.price*(parseInt(a.checkOut.slice(8))-parseInt(a.checkIn.slice(8)))+b.price*(parseInt(b.checkOut.slice(8))-parseInt(b.checkIn.slice(8)))));
+         
+    if(sortedEmployees.length>0){
+      let test= 0;
+     sortedEmployees.forEach((a)=> {
+         test +=a.price*(parseInt(a.checkOut.slice(8))-parseInt(a.checkIn.slice(8))) 
+      })
+      setTotalPrice(test);
+    }
 		setRooms(sortedEmployees);	
 	}
 
