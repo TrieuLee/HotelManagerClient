@@ -9,6 +9,7 @@ import Guest from "./components/Guest/guestList";
 import Service from "./components/Service/serviceList";
 import BookRoom from "./components/BookRoom/bookRoomList";
 import Revenus from "./components/RevenueRoom/revenueRoomList";
+import BookService from "./components/BookService/bookServiceList";
 function Router() {
    return (
     <BrowserRouter>
@@ -51,7 +52,7 @@ function Router() {
         </Route>
         <Route path="/bookingRoom"><BookRoom payBill={true}/></Route>
         <Route path="/checkoutRoom"><BookRoom payBill={false}/></Route>
-        <Route path="/useService">Sử Dụng Dịch Vụ</Route>
+        <Route path="/useService"><BookService payBill={true}/></Route>
         <Route path="/roomRevenue"><Revenus payBill={true}/></Route>
         <Route path="/serviceRevenue">Doanh Thu Dịch Vụ</Route>
         <Route path="/login"><Login/></Route>
