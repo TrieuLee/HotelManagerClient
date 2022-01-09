@@ -1,0 +1,8 @@
+.lblDate{
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+}
+.lblcheckIn{
+    margin-right: 100px;
+}

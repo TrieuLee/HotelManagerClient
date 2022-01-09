@@ -7,10 +7,7 @@ import Login from "./components/Auth/login";
 import Room from "./components/Room/roomList";
 import Guest from "./components/Guest/guestList";
 import Service from "./components/Service/serviceList";
-import BookRoom from "./components/BookRoom/bookRoomList";
-import RevenusRoom from "./components/RevenueRoom/revenueRoomList";
-import RevenusService from "./components/RevenueService/revenusSeviceList";
-import BookService from "./components/BookService/bookServiceList";
+import BillRoom from "./components/BillRoom/billRoomList";
 function Router() {
    return (
     <BrowserRouter>
@@ -52,31 +49,20 @@ function Router() {
           </div>
         </Route>
 
-        <Route path="/bookingRoom">
-        <div className="container-xl">
-            <div className="table-responsive">
-              <div className="table-wrapper">
-              <BookRoom payBill={true}/>
-              </div>
-            </div>
-          </div>
-          </Route>
-        <Route path="/checkoutRoom"><BookRoom payBill={false}/></Route>
-        <Route path="/useService"><BookService payBill={true}/></Route>
+        <Route path="/bookingRoom">Đặt Phòng</Route>
+        <Route path="/checkoutRoom">Trả Phòng</Route>
+        <Route path="/useService">Đặt Dịch vụ</Route>
         
         <Route path="/roomRevenue">
-        <div className="container-xl">
-            <div className="table-responsive">
-              <div className="table-wrapper">
-              <RevenusRoom payBill={false}/>
+          <div className="container-xl">
+              <div className="table-responsive">
+                <div className="table-wrapper">
+                <BillRoom payBill={true}/>
+                </div>
               </div>
-            </div>
           </div>
-        
-          
-          
-          </Route>
-        <Route path="/serviceRevenue"><RevenusService payBill={true}/></Route>
+      </Route>
+        <Route path="/serviceRevenue">Doanh thu dịch vụ</Route>
         <Route path="/login"><Login/></Route>
     </Switch>
     </BrowserRouter>

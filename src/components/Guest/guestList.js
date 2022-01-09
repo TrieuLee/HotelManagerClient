@@ -28,6 +28,7 @@ const GuestList = () => {
 	}
 
 	function renderGuests() {
+
 		let guestData = [...guests];
 		return guestData.map((guest,i) =>{
 			return <Guest key={i} guest ={guest}
