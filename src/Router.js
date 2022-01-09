@@ -9,71 +9,72 @@ import Guest from "./components/Guest/guestList";
 import Service from "./components/Service/serviceList";
 import BillRoom from "./components/BillRoom/billRoomList";
 import BillService from "./components/BillService/billServiceList";
+import BookRoom from "./components/BookRoom/bookRoom";
 function Router() {
    return (
     <BrowserRouter>
-    <Switch>
-        <Route exact path="/">
-          <div className="container-xl">
-            <div className="table-responsive">
-              <div className="table-wrapper">
-                      <EmployeeList />
+        <Switch>
+            <Route exact path="/">
+              <div className="container-xl">
+                <div className="table-responsive">
+                  <div className="table-wrapper">
+                          <EmployeeList />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </Route>
-        <Route path="/room">
-        <div className="container-xl">
-            <div className="table-responsive">
-              <div className="table-wrapper">
-                      <Room />
+            </Route>
+            <Route path="/room">
+            <div className="container-xl">
+                <div className="table-responsive">
+                  <div className="table-wrapper">
+                          <Room />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </Route>
-        <Route path="/customer">
-        <div className="container-xl">
-            <div className="table-responsive">
-              <div className="table-wrapper">
-                      <Guest />
+            </Route>
+            <Route path="/customer">
+            <div className="container-xl">
+                <div className="table-responsive">
+                  <div className="table-wrapper">
+                          <Guest />
+                  </div>
+                </div>
+              </div>  
+            </Route>
+            <Route path="/service">
+            <div className="container-xl">
+                <div className="table-responsive">
+                  <div className="table-wrapper">
+                          <Service />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>  
-        </Route>
-        <Route path="/service">
-        <div className="container-xl">
-            <div className="table-responsive">
-              <div className="table-wrapper">
-                      <Service />
-              </div>
-            </div>
-          </div>
-        </Route>
+            </Route>
 
-        <Route path="/bookingRoom">Đặt Phòng</Route>
-        <Route path="/checkoutRoom">Trả Phòng</Route>
-        <Route path="/useService">Đặt Dịch vụ</Route>
-        
-        <Route path="/roomRevenue">
-          <div className="container-xl">
-              <div className="table-responsive">
-                <div className="table-wrapper">
-                <BillRoom payBill={true}/>
-                </div>
+            <Route path="/bookingRoom"><BookRoom/></Route>
+            <Route path="/checkoutRoom">Trả Phòng</Route>
+            <Route path="/useService">Đặt Dịch vụ</Route>
+            
+            <Route path="/roomRevenue">
+              <div className="container-xl">
+                  <div className="table-responsive">
+                    <div className="table-wrapper">
+                    <BillRoom payBill={true}/>
+                    </div>
+                  </div>
               </div>
-          </div>
-      </Route>
-        <Route path="/serviceRevenue">
-        <div className="container-xl">
-              <div className="table-responsive">
-                <div className="table-wrapper">
-                <BillService payBill={true}/>
-                </div>
+          </Route>
+            <Route path="/serviceRevenue">
+            <div className="container-xl">
+                  <div className="table-responsive">
+                    <div className="table-wrapper">
+                    <BillService payBill={true}/>
+                    </div>
+                  </div>
               </div>
-          </div>
-        </Route>
-        <Route path="/login"><Login/></Route>
-    </Switch>
+            </Route>
+            <Route path="/login"><Login/></Route>
+        </Switch>
     </BrowserRouter>
    )
 }
