@@ -200,6 +200,7 @@ table.table .avatar {
 	margin-left: 1030px;
 	margin-bottom: 10px;
 }
+
 .reservation-content{
     background-color: lemonchiffon; 
     border-radius: 20px; 
@@ -264,7 +265,9 @@ table.table .avatar {
 	width: 100%;
 	padding:5px;
 }
-.lblColor{
+.lblIcon{
+    position: absolute;
+    padding: 14px;
     color: black;
-    font-weight: bold;
+
 }
