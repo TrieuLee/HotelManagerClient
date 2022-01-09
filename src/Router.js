@@ -8,6 +8,7 @@ import Room from "./components/Room/roomList";
 import Guest from "./components/Guest/guestList";
 import Service from "./components/Service/serviceList";
 import BillRoom from "./components/BillRoom/billRoomList";
+import BillService from "./components/BillService/billServiceList";
 function Router() {
    return (
     <BrowserRouter>
@@ -62,7 +63,15 @@ function Router() {
               </div>
           </div>
       </Route>
-        <Route path="/serviceRevenue">Doanh thu dịch vụ</Route>
+        <Route path="/serviceRevenue">
+        <div className="container-xl">
+              <div className="table-responsive">
+                <div className="table-wrapper">
+                <BillService payBill={true}/>
+                </div>
+              </div>
+          </div>
+        </Route>
         <Route path="/login"><Login/></Route>
     </Switch>
     </BrowserRouter>
