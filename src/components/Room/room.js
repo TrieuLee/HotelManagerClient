@@ -1,9 +1,10 @@
 import React from 'react';
-
+import {useHistory } from 'react-router-dom';
 import Axios from 'axios';
 
 function Room({room,getRooms,editRoom}) {
 
+    const history = useHistory();
     async function deleteEmployee(){
         if(window.confirm('Bạn có chắc muốn xóa dữ liệu phòng này?')){
             await Axios.delete(`http://localhost:5000/room/${room._id}`);
@@ -13,6 +14,8 @@ function Room({room,getRooms,editRoom}) {
 
     function getEmployee() {
         localStorage.setItem('room',JSON.stringify(room));
+        if(localStorage.getItem('guest')===null) history.push("/customer");
+        else history.push("/bookingRoom")
     }
 
     return (

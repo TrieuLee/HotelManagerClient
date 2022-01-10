@@ -65,7 +65,7 @@ function Navbar({openNavbar, setOpenNavbar}) {
 
                 {/* list menu */}
                 <li onClick={() => setOpenList(!openList)}>
-                    <a>
+                    <a href='#menu'>
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faFilter} /></i>
                         <span className="links_name">Chức năng</span>
                     </a>
@@ -87,17 +87,17 @@ function Navbar({openNavbar, setOpenNavbar}) {
                     <span className="tooltip">Trả phòng</span>
                 </li>
                 <li className={openList&&!openNavbar?'subNav':'subNavClose'}>
-                    <a href = "/useService">
+                    <a href = "/bookingService">
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faFunnelDollar} /></i>
-                        <span className="links_name">Sử dụng dịch vụ</span>
+                        <span className="links_name">Đặt dịch vụ</span>
                     </a>
-                    <span className="tooltip">Sử dụng dịch vụ</span> 
+                    <span className="tooltip">Đặt dịch vụ</span> 
                 </li>
                 
                 
                 {/* list menu */}
                 <li onClick={() => setOpenListNav(!openListNav)}>
-                    <a>
+                    <a href='#baocao'>
                         <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faCommentDollar} /></i>
                         <span className="links_name">Báo cáo</span>
                     </a>

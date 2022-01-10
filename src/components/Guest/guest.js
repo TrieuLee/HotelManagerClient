@@ -2,7 +2,6 @@ import React from 'react';
 
 import '../Employee/Employee.css';
 import Axios from 'axios';
-import { stringify } from 'uuid';
 
 function Guest({guest,getGuests,editGuest}) {
 
