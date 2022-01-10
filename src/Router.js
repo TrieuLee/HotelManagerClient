@@ -12,6 +12,7 @@ import BillService from "./components/BillService/billServiceList";
 import BookRoom from "./components/BookRoom/bookRoom";
 import BookService from "./components/BookService/bookService";
 import CheckOutRoom from "./components/CheckoutRoom/checkoutRoomList";
+import CheckOutService from "./components/CheckoutService/checkoutServiceList";
 function Router() {
    return (
     <BrowserRouter>
@@ -56,7 +57,7 @@ function Router() {
             <Route path="/bookingRoom"><BookRoom/></Route>
             <Route path="/checkoutRoom"><CheckOutRoom/></Route>
             <Route path="/bookingService"><BookService/></Route>
-            <Route path="/checkoutService">Trả DV</Route>
+            <Route path="/checkoutService"><CheckOutService/></Route>
             
             <Route path="/roomRevenue">
               <div className="container-xl">

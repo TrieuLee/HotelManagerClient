@@ -2,8 +2,8 @@ import React, {useContext, useEffect, useState } from 'react';
 import Axios from 'axios';
 
 import UserContext from '../../context/UserContext';
-import Room from './checkoutRoom';
-import './checkoutRoom';
+import Room from './checkoutService';
+import './checkoutService';
 import ErrorMessage from '../misc/ErrorMessage';
 
 function RoomList() {
@@ -20,19 +20,19 @@ function RoomList() {
 
     async function getRooms() {
         if(guestData!==null){
-            const roomData = await Axios.get(`http://localhost:5000/bookRoom/${guestData._id}`);
+            const roomData = await Axios.get(`http://localhost:5000/bookService/${guestData._id}`);
             let sortedEmployees  = [...roomData.data];
-            sortedEmployees = sortedEmployees.filter(a => a.stateGiveMoney===false);
+           
+            sortedEmployees = sortedEmployees.filter(a => a.state===false);
             setRooms(sortedEmployees);
-            localStorage.clear();
+            
         }   
 	}
 
     function renderEmployees() {
-		
 			const sortedEmployees =  rooms.map((room,i) =>{
 				return <Room key={i} room ={room}
-				getRooms={getRooms}
+				
 				/>
 			})
 			return sortedEmployees;
@@ -51,7 +51,7 @@ function RoomList() {
                             user!==null && (
                                 <>
                                     {rooms.length > 0 ? renderEmployees() : (
-                                            <h3>Bạn chưa thuê phòng. Hãy đặt phòng yêu thích của bạn.</h3>
+                                            <h3>Bạn chưa đặt dich vụ. Hãy đặt dịch vụ của chúng tôi để được trải nghiệm tốt nhất.</h3>
                                     )}
                                 </>
                             )

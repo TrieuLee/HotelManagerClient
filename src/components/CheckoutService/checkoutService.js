@@ -11,10 +11,12 @@ function Room({room}) {
 	async function saveRoom(e) {
 
         try {
-            await Axios.put(`http://localhost:5000/bookRoom/payBill/manager/${room._id}`); 
+			console.log(room.name);
+            await Axios.put(`http://localhost:5000/bookService/payService/manager/${room._id}`); 
 
             if(window.confirm('Bạn đã thanh toán thành công. Xin chào và hẹn gặp lại')){       
                 history.push("/");
+				localStorage.clear();
             } 
         } catch (err) {
             if(err.response && err.response.data.errorMessage) setErrorMessage(err.response.data.errorMessage)
@@ -32,50 +34,38 @@ function Room({room}) {
 				message={errorMessage}/>
 			)}
 			<div>
-            <h2 className="bill-title">Hóa đơn của khách hàng</h2>
+            <h2 className="bill-title">Hóa đơn dịch vụ</h2>
             </div>
 			<table>
 				<tr>
-					<th>Số phòng: </th>
-					<td>{room.number}</td>
+					<th>Tên dịch vụ: </th>
+					<td>{room.name}</td>
 				</tr>
 				<tr>
-					<th>Tầng:</th>
-					<td>{room.floor}</td>
-				</tr>
-				<tr>
-					<th>Giá:</th>
+					<th>Giá</th>
 					<td>{room.price}</td>
 				</tr>
 				<tr>
-					<th>Loại phòng:</th>
-					<td>{room.typeofRoom}</td>
+					<th>Số lượng</th>
+					<td>{room.quantity}</td>
 				</tr>
 				<tr>
-					<th>Ngày thuê:</th>
-					<td>{room.checkIn}</td>
+					<th>Tình trạng thanh Toán</th>
+					<td>{room.state?'Đã thanh toán':'Chưa thanh toán'}</td>
 				</tr>
 				<tr>
-					<th>Ngày trả phòng:</th>
-					<td>{room.checkOut}</td>
+					<th>Tổng tiền</th>
+					<td>{room.quantity*room.price}</td>
 				</tr>
-				<tr>
-					<th>Tổng tiền:</th>
-					<td>{room.price*(parseInt(room.checkOut.slice(8))-parseInt(room.checkIn.slice(8)))}</td>
-				</tr>
-				<tr>
-					<th>Tình trạng thanh toán:</th>
-					<td>{room.stateGiveMoney?'Đã thanh toán':'Chưa thanh toán'}</td>
-				</tr>
+					
 			</table>
-			<div className='btn-confirm2'>
-			<Button 
-				width='2000'
+			<div className='btn-confirm1'>
+			<Button
 				color="danger"
 				outline
 				type="button"
 				onClick={saveRoom}  >
-				Thanh toán
+				Thanh Toán
 			</Button>		
 			</div>
 		
