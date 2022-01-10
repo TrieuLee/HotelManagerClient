@@ -271,3 +271,7 @@ table.table .avatar {
     color: black;
 
 }
+
+::placeholder{
+    color: black;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../Employee/Employee.css';
 import Axios from 'axios';
+import { stringify } from 'uuid';
 
 function Guest({guest,getGuests,editGuest}) {
 
@@ -10,6 +11,10 @@ function Guest({guest,getGuests,editGuest}) {
             await Axios.delete(`http://localhost:5000/customer/${guest._id}`);
             getGuests();
         } 
+    }
+
+    function getEmployee() {
+        localStorage.setItem('guest',JSON.stringify(guest));
     }
 
     return (
@@ -22,6 +27,7 @@ function Guest({guest,getGuests,editGuest}) {
             <td>
                 <a onClick={() => editGuest(guest)} href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                 <a onClick={deleteEmployee} href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                <a onClick={getEmployee} href="#chooseEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
             </td>
         </tr>
         
