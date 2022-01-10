@@ -23,7 +23,7 @@ function Service({service,getServices,editService}) {
             <td>
                 <a onClick={() => editService(service)} href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                 <a onClick={deleteService} href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                <a onClick={getEmployee} href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                <a onClick={getEmployee} href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i style={{color:"green"}} className="material-icons" data-toggle="tooltip" title="Add">&#xe147;</i></a>
             </td>
         </tr>
         

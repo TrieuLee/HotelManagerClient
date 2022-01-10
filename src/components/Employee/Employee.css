@@ -66,7 +66,12 @@ table.table th i {
 	margin: 0 5px;
 	cursor: pointer;
 }	
-
+.table th{
+	border-top: none;
+}
+.table td{
+	border-top: none;
+}
 table.table td:last-child i {
 	opacity: 0.9;
 	font-size: 22px;
@@ -190,7 +195,7 @@ table.table .avatar {
 	padding: 35px;
 }
 .btn-confirm{
-	margin-left: 510px;
+	margin-left: 450px;
 	margin-top: 20px;
 }
 .btn-confirm .btn-outline-success{
@@ -265,6 +270,10 @@ table.table .avatar {
 	width: 100%;
 	padding:5px;
 }
+.roomInput1{
+	border: 1px solid rgb(205, 166, 85);
+	padding:5px;
+}
 .lblIcon{
     position: absolute;
     padding: 14px;
@@ -303,4 +312,16 @@ table.table .avatar {
 
 }
 
+.employTable{
+	
+}
+.employTable h2{
+	text-align: center;
+}
 
+.employTable table{
+	margin-left: 380px;
+	width: 60%;
+
+
+}

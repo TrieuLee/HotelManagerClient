@@ -127,17 +127,19 @@ const EmployeeList = () => {
 		)}
 
 		{user !== null && userDecentralize===2 &&(
-			<table>
+			<div className='employTable'>
+				<h2>Hồ sơ nhân viên</h2>
+				<table>
 				<tr>
-					<th>Tên Nhân Viên</th>
+					<th>Tên nhân viên</th>
 					<td>{user}</td>
 				</tr>
 				<tr>
-					<th>Chức Vụ</th>
+					<th>Chức vụ</th>
 					<td>{userRole}</td>
 				</tr>
 				<tr>
-					<th>Phòng Ban</th>
+					<th>Phòng ban</th>
 					<td>{userNameOfRoom}</td>
 				</tr>
 				<tr>
@@ -152,7 +154,9 @@ const EmployeeList = () => {
 					<th>Lương</th>
 					<td>{userSalary}</td>
 				</tr>
-			</table>
+			</table>	
+			</div>
+			
 		)}
 
 		{user === null&&(

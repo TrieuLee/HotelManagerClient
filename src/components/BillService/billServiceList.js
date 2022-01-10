@@ -61,7 +61,7 @@ function RoomList({payBill}) {
 					type = 'date' 
 					value={dateIn}
 					onChange={(e) => setDateIn(e.target.value)}
-					className='roomInput'
+					className='roomInput1'
 					
 					/>
 			</div> 
@@ -71,7 +71,7 @@ function RoomList({payBill}) {
 					type = 'date' 
 					value={dateOut}
 					onChange={(e) => setDateOut(e.target.value)}
-					className='roomInput'
+					className='roomInput1'
 					
 					/>
 					<label className="lblColor"  style={{marginLeft:'50px',background:'rgb(205, 166, 85)', padding:'5px', cursor:'pointer'}}onClick={getRooms} htmlFor ='typeofRoom'>Thống kê</label>
