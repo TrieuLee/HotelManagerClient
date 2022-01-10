@@ -254,7 +254,7 @@
 .subNav{
   display:block;
   margin-left: 25px !important;
-  margin-bottom: 8px!important;
+  margin-bottom: -10px!important;
   transition: display 20s ease;
 
 }

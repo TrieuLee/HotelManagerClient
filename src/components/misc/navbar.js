@@ -93,6 +93,13 @@ function Navbar({openNavbar, setOpenNavbar}) {
                     </a>
                     <span className="tooltip">Đặt dịch vụ</span> 
                 </li>
+                <li className={openList&&!openNavbar?'subNav':'subNavClose'}>
+                    <a href = "/checkoutService">
+                        <i className='bx bx-grid-alt'><FontAwesomeIcon icon={faFunnelDollar} /></i>
+                        <span className="links_name">Thanh toán dịch vụ</span>
+                    </a>
+                    <span className="tooltip">Thanh toán dịch vụ</span> 
+                </li>
                 
                 
                 {/* list menu */}
