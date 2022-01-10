@@ -275,3 +275,32 @@ table.table .avatar {
 ::placeholder{
     color: black;
 }
+.tblBill{
+    background-color: lemonchiffon;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top:50px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.tblBill table{
+    margin-left: 170px;
+    margin-right: 170px;
+	width: 100%;
+}
+.bill-title{
+	text-align: center;
+}
+.btn-confirm2{
+
+    margin-top: 50px;
+}
+.btn-confirm2 .btn{
+    width: 50%;
+    margin-left: 300px;
+    margin-right: 300px;
+
+}
+
+

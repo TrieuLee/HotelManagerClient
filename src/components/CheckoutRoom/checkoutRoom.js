@@ -68,7 +68,7 @@ function Room({room}) {
 					<td>{room.stateGiveMoney?'Đã thanh toán':'Chưa thanh toán'}</td>
 				</tr>
 			</table>
-			<div className='btn-confirm1'>
+			<div className='btn-confirm2'>
 			<Button 
 				width='2000'
 				color="danger"
