@@ -9,6 +9,7 @@ function Reservation() {
 	const [price,setPrice] = useState(0)
 	const [quantity,setQuantity] = useState(0);
 	const [idService,setIDService] = useState("");
+	const [unit,setUnit] = useState("");
     const [errorMessage,setErrorMessage] = useState(null);
     const history = useHistory();
     const [guestData,setGuestData] = useState(JSON.parse(localStorage.getItem('guest')));
@@ -21,6 +22,7 @@ function Reservation() {
             setPrice(roomData.price ? roomData.price: 0);
             setQuantity(roomData.quantity ? roomData.quantity: "");
             setIDService(roomData._id ? roomData._id: "");                  
+            setUnit(roomData.unit ? roomData.unit: "");                  
         }   
      },[])
 
@@ -28,6 +30,7 @@ function Reservation() {
         
 		e.preventDefault();
 		const roomData = {
+            unit:unit?unit: undefined,
 			quantity: quantity ? quantity: undefined,
 			IDService: idService ? idService: undefined,
 			name: name ? name: undefined,
@@ -157,7 +160,7 @@ function Reservation() {
                         />
                     </div>
                     <div>
-                        <label className="lblColor"htmlFor ='note'>Số lượng</label>
+                        <label className="lblColor"htmlFor ='note'>Số {unit}</label>
                         <input id = 'note' 
                         type = 'number' 
                         value={quantity}

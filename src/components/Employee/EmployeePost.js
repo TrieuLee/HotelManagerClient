@@ -167,7 +167,7 @@ function EmployeePost({getEmployees,setEmployeeCreateOpen}) {
             type="submit"
             color="success"
             outline>
-            Cập Nhập
+            Tạo mới
          </Button>
          <Button
             color="danger"

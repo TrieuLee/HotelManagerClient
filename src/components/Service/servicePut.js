@@ -8,6 +8,7 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
     
 	const [name,setName] = useState("");
 	const [price,setPrice] = useState(0)
+    const [unit,setUnit] = useState("");
     const [errorMessage,setErrorMessage] = useState(null);
 
 
@@ -15,6 +16,7 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
         if(editServiceData){
             setName(editServiceData.name ? editServiceData.name: "");   
             setPrice(editServiceData.price ? editServiceData.price: "");
+            setUnit(editServiceData.unit ? editServiceData.unit: "");
            
         }
      },[editServiceData])
@@ -25,7 +27,7 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
 		const roomData = {
 			name: name ? name: undefined,
 			price: price ? price: undefined,
-		
+            unit: unit ? unit: undefined,		
 		}
 
         try {
@@ -84,6 +86,18 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
                         />
                     </td>
                 </tr>
+                <tr>
+                    <th scope="row">
+                        <label htmlFor ='price'>Đơn vị tính</label>                   
+                    </th>
+                    <td>
+                        <input className='formInput' id = 'price' 
+                        type = 'text' 
+                        value={unit}
+                        onChange={(e) => setUnit(e.target.value)}
+                        />
+                    </td>
+                </tr>
 
             </tbody>
         </Table>
@@ -93,7 +107,7 @@ function RoomEditor({getServices,setServiceEditOpen, editServiceData}) {
             type="submit"
             color="success"
             outline>
-            Tạo mới
+            Cập Nhập
          </Button>
          <Button
             color="danger"

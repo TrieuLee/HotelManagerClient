@@ -42,8 +42,8 @@ function Room({room}) {
 					<td>{room.name}</td>
 				</tr>
 				<tr>
-					<th>Giá</th>
-					<td>{room.price}</td>
+					<th>Đơn giá</th>
+					<td>{room.price} /1{room.unit}</td>
 				</tr>
 				<tr>
 					<th>Số lượng</th>

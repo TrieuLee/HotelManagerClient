@@ -20,8 +20,8 @@ function Employee({employee,getEmployees,editEmployee}) {
             <td>{employee.email}</td>
             <td>{employee.phoneNumber}</td>
             <td>
-                <a onClick={() => editEmployee(employee)} href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <a onClick={deleteEmployee} href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                <a onClick={() => editEmployee(employee)} href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Chỉnh sửa">&#xE254;</i></a>
+                <a onClick={deleteEmployee} href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Xóa">&#xE872;</i></a>
             </td>
         </tr>
         

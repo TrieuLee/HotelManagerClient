@@ -124,7 +124,7 @@ function GuestPost({getGuests,setGuestEditorOpen,editGuestData}) {
             type="submit"
             color="success"
             outline>
-            Tạo mới
+            Cập nhập
          </Button>
          <Button
             color="danger"

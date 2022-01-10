@@ -165,7 +165,7 @@ function RoomEditor({getRooms,setRoomEditOpen,editRoomData}) {
             type="submit"
             color="success"
             outline>
-            Tạo mới
+            Cập nhập
          </Button>
          <Button
             color="danger"

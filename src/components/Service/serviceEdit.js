@@ -7,6 +7,7 @@ function RoomEditor({getServices,setServiceCreateOpen}) {
 
     
 	const [name,setName] = useState("");
+	const [unit,setUnit] = useState("");
 	const [price,setPrice] = useState(0)
     const [errorMessage,setErrorMessage] = useState(null);
 
@@ -16,6 +17,7 @@ function RoomEditor({getServices,setServiceCreateOpen}) {
 		const serviceData = {
 			name: name ? name: undefined,
 			price: price ? price: undefined,
+			unit: unit ? unit: undefined,
 		}
 
         try {
@@ -70,6 +72,18 @@ function RoomEditor({getServices,setServiceCreateOpen}) {
                         type = 'number' 
                         value={price}
                         onChange={(e) => setPrice(e.target.value)}
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label htmlFor ='price'>Đơn vị tính</label>                   
+                    </th>
+                    <td>
+                        <input className='formInput' id = 'price' 
+                        type = 'text' 
+                        value={unit}
+                        onChange={(e) => setUnit(e.target.value)}
                         />
                     </td>
                 </tr>

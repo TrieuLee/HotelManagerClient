@@ -19,7 +19,7 @@ function RoomList({payBill}) {
 	},[user]);
 
     async function getRooms() {
-		const roomData = await Axios.get("http://localhost:5000/bookService/manager");
+		const roomData = await Axios.get("http://localhost:5000/bookService/service/manager");
 		let sortedEmployees  = [...roomData.data];
 		sortedEmployees = sortedEmployees.filter(a => a.state===payBill && Date.parse(dateIn)<=Date.parse(a.createdAt.slice(0,10))&& Date.parse(dateOut)>=Date.parse(a.createdAt.slice(0,10)));
 		
@@ -56,7 +56,7 @@ function RoomList({payBill}) {
 	  <>
 	  	<div className='lblDate' style={{marginTop:'20px'}}>
 			<div className='lblcheckIn'>
-					<label className="lblColor"  style={{marginRight:'10px'}} htmlFor ='typeofRoom'>Ngày thuê</label>
+					<label className="lblColor"  style={{marginRight:'10px'}} htmlFor ='typeofRoom'>Từ ngày</label>
 					<input id = 'typeofRoom' 
 					type = 'date' 
 					value={dateIn}
@@ -66,7 +66,7 @@ function RoomList({payBill}) {
 					/>
 			</div> 
 			<div className='lblcheckOut'>
-					<label className="lblColor" style={{marginRight:'10px'}} htmlFor ='typeofRoom'>Ngày trả phòng</label>
+					<label className="lblColor" style={{marginRight:'10px'}} htmlFor ='typeofRoom'>Đến Ngày</label>
 					<input id = 'typeofRoom' 
 					type = 'date' 
 					value={dateOut}
